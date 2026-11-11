@@ -1,14 +1,30 @@
 # piano-e-competition-midi-files
 all midi files in piano-e-competition
 
-모든 미디는 [여기서](https://www.piano-e-competition.com/) 다운받음
+## Translated from original (Korean)
 
-웹 크롤링하는 코드는 코틀린으로 짰고, `src/main/kotlin/Main.kt`에 코드 있음
+> All MIDI files were downloaded from [here](https://www.piano-e-competition.com/).
+> 
+> The web-crawling code is written in Kotlin and can be found in `src/main/kotlin/Main.kt`.
+> 
+> MIDI files downloaded directly from the web are located in the `download` directory.
+> 
+> The code to remove pedal data—while extending the duration of each note to account for the pedal—is written in Python and located at `python/MIDI_Pedal.py`.
+> 
+> The resulting files are stored in the `midi` directory.
+> 
+> ![image](https://user-images.githubusercontent.com/94269897/193013925-fcde1b39-aba5-4008-9085-a0813f072ca6.png)
 
-웹에서 바로 다운받은 미디는 `download`에 있고,
+## Reorganize and Rename
 
-페달 없애는 대신에 음들을 페달 반영해서 다 늘리는 코드는 파이썬으로 짬 `python/MIDI_Pedal.py`
+Since the original Piano-e-competition website is now offline, archived pages by Internet Archive Wayback Machine is used.  Here is the URL: https://web.archive.org/web/20190918170858/http://piano-e-competition.com/midi_2002.asp
 
-실행해서 나온 파일들은 `: midi`에 있음
+Data for all performances are saved and edited to `csv/performances.csv`
 
-![image](https://user-images.githubusercontent.com/94269897/193013925-fcde1b39-aba5-4008-9085-a0813f072ca6.png)
+MIDI files are renamed to include performer, composer, and title of the piece.  Detailed information of each piece is also saved to meta messages in the MIDI file.
+
+New directories are created to save the MIDI files (symbolic links) in various organization schems, such as by year/round, or by composer/opus.
+
+## Notice
+
+There may be mistakes in the processing of parsing the webarchive data. They will be corrected as they are found.
