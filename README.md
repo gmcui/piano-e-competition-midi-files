@@ -1,5 +1,5 @@
 # piano-e-competition-midi-files
-all midi files in piano-e-competition
+All midi files in piano-e-competition
 
 ## Translated from original (Korean)
 
@@ -11,7 +11,7 @@ all midi files in piano-e-competition
 > 
 > The code to remove pedal data—while extending the duration of each note to account for the pedal—is written in Python and located at `python/MIDI_Pedal.py`.
 > 
-> The resulting files are stored in the `midi` directory.
+> The resulting files are stored in the `midi_without_pedal` directory.
 > 
 > ![image](https://user-images.githubusercontent.com/94269897/193013925-fcde1b39-aba5-4008-9085-a0813f072ca6.png)
 
@@ -21,10 +21,10 @@ Since the original Piano-e-competition website is now offline, archived pages by
 
 Data for all performances are saved and edited to `csv/performances.csv`
 
-MIDI files are renamed to include performer, composer, and title of the piece.  Detailed information of each piece is also saved to meta messages in the MIDI file.
+MIDI files are renamed to include performer, composer, and title of the piece.  Detailed information of each piece is also saved to meta messages in the MIDI file.  New directories are created to save the MIDI files (symbolic links) in various organization schems, such as by year/round, or by composer/opus.
 
-New directories are created to save the MIDI files (symbolic links) in various organization schems, such as by year/round, or by composer/opus.
+These files are stored in the `midi_with_title` directory.
 
-## Notice
+### Notice
 
 There may be mistakes in the processing of parsing the webarchive data. They will be corrected as they are found.
